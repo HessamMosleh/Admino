@@ -1,0 +1,331 @@
+{
+	"info": {
+		"_postman_id": "84950256-526b-4391-b1f9-74618f7937c6",
+		"name": "Admino",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1855938"
+	},
+	"item": [
+		{
+			"name": "App",
+			"item": [
+				{
+					"name": "Sign up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "language",
+									"value": "en",
+									"description": "language must be one of the following values: fa, ar, en",
+									"type": "string"
+								},
+								{
+									"key": "platform",
+									"value": "android",
+									"description": "platform must be one of the following values: android, ios, web",
+									"type": "string"
+								},
+								{
+									"key": "os",
+									"value": "29",
+									"description": "android sdk or iOS version",
+									"type": "string"
+								},
+								{
+									"key": "build",
+									"value": "1",
+									"description": "app build number",
+									"type": "string"
+								},
+								{
+									"key": "email",
+									"value": "nnn@bbb.ccc",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Hessam@1375",
+									"description": "Hessam1375",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Hessam Mosleh",
+									"type": "text"
+								},
+								{
+									"key": "confirmPassword",
+									"value": "Hessam@1375",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/user/sign-up",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "language",
+									"value": "en",
+									"description": "language must be one of the following values: fa, ar, en",
+									"type": "string"
+								},
+								{
+									"key": "platform",
+									"value": "android",
+									"description": "platform must be one of the following values: android, ios, web",
+									"type": "string"
+								},
+								{
+									"key": "os",
+									"value": "29",
+									"description": "android sdk or iOS version",
+									"type": "string"
+								},
+								{
+									"key": "build",
+									"value": "1",
+									"description": "app build number",
+									"type": "string"
+								},
+								{
+									"key": "email",
+									"value": "ffff@bbb.ccc",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Hessam@1375",
+									"description": "Hessam1375",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/user/sign-in",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"sign-in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiI2NDkwYjE1YzRmOWEzOWFlNzkxMDdiMTAiLCJpYXQiOjE2ODcyMDQxODgsImV4cCI6MTY5MjM4ODE4OH0.RbFbzVsUq8hzVNpdK3SV-cmlbl6tVTfeJk9z-pfQVm0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/user/profile",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Sign in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "language",
+									"value": "en",
+									"description": "language must be one of the following values: fa, ar, en",
+									"type": "string"
+								},
+								{
+									"key": "platform",
+									"value": "android",
+									"description": "platform must be one of the following values: android, ios, web",
+									"type": "string"
+								},
+								{
+									"key": "os",
+									"value": "29",
+									"description": "android sdk or iOS version",
+									"type": "string"
+								},
+								{
+									"key": "build",
+									"value": "1",
+									"description": "app build number",
+									"type": "string"
+								},
+								{
+									"key": "email",
+									"value": "nnn@bbb.ccc",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Hessam@1375",
+									"description": "Hessam1375",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3001/auth/sign-in",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"auth",
+								"sign-in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user Info",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiI2NDkwYjE1YzRmOWEzOWFlNzkxMDdiMTAiLCJpYXQiOjE2ODcyMDQxODgsImV4cCI6MTY5MjM4ODE4OH0.RbFbzVsUq8hzVNpdK3SV-cmlbl6tVTfeJk9z-pfQVm0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"James Camerrone\",\n    \"roles\":[\"viewer\"],\n    \"password\":\"Jm12345678\",\n    \"confirmPassword\":\"Jm12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/user/649e935e11c11f9de6bc8eda",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								"649e935e11c11f9de6bc8eda"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiI2NDllYzk5YzRjYzA3ZGIyYjQ5Y2M5ZTYiLCJpYXQiOjE2ODgxMjc5MDAsImV4cCI6MTY5MzMxMTkwMH0.ZXxgTCmaPa-kMXthbFYj2d63nP1fHabrDr08kJGe1lM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3001/user",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiI2NDllYzk5YzRjYzA3ZGIyYjQ5Y2M5ZTYiLCJpYXQiOjE2ODgxMjc5MDAsImV4cCI6MTY5MzMxMTkwMH0.ZXxgTCmaPa-kMXthbFYj2d63nP1fHabrDr08kJGe1lM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3001/user/profile",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

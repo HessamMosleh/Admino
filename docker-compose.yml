@@ -1,0 +1,41 @@
+services:
+  admin:
+    build:
+      context: ./
+      dockerfile: ./apps/admin-admino/Dockerfile
+    ports:
+      - '3001:3001'
+    env_file:
+      - .env
+    depends_on:
+      - mongodb
+    volumes:
+        - .:/usr/src/app # any change to base folder should be reflected
+        - /usr/src/app/node_modules
+    command: npm run start:dev admin-admino # overrides CMD from dockerfile
+
+  app:
+    build:
+      context: ./
+      dockerfile: ./apps/app-admino/Dockerfile
+    ports:
+      - '3000:3000'
+    env_file:
+      - .env
+    depends_on:
+      - mongodb
+    volumes:
+      - .:/usr/src/app # any change to base folder should be reflected
+      - /usr/src/app/node_modules
+    command: npm run start:dev app-admino # overrides CMD from dockerfile
+
+
+
+  mongodb:
+    image: docker.io/bitnami/mongodb:6.0
+    ports:
+      - "27017:27017"
+    volumes:
+      - './data:/bitnami/mongodb'
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
